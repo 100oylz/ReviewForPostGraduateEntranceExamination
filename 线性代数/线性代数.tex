@@ -1,0 +1,39 @@
+\documentclass{previewbook}
+\usepackage{amsmath}
+\usepackage[]{fontspec,xunicode}
+\usepackage{amssymb}
+\usepackage[]{amsthm}
+\usepackage[]{graphicx,xcolor}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[]{imakeidx}
+\usepackage[]{tikz}
+\usepackage{paralist}
+\title{线性代数}
+\author{欧阳林茁}
+\date{2023年6月22日}
+\info{这是一份考研复习使用的线性代数$\mathcal{\LaTeXe}$文档}
+\makeindex[columns=2,intoc,title=术语索引,options=-s example.ist,columnseprule]
+\usepackage{hyperref}
+\hypersetup{
+	bookmarksnumbered,
+	bookmarks=true,
+	colorlinks=true,
+	linkcolor={red},
+	citecolor={green},
+	urlcolor={blue},
+	pagebackref=true
+}
+
+\newcommand{\easyred}[1]{\textcolor{red}{#1}}
+\begin{document}
+\dominitoc
+\input{titletoc/titletoc.tex}
+\input{chapter/矩阵及其初等变换.tex}
+\input{chapter/行列式.tex}
+\input{chapter/几何空间.tex}
+\input{chapter/向量空间.tex}
+\input{chapter/特征值与特征向量.tex}
+\input{chapter/二次型与二次曲面.tex}
+\printindex
+\end{document}
