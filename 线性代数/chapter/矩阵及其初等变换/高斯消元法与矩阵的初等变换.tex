@@ -38,7 +38,7 @@
 
 如果行阶梯形矩阵每个非零行的非零首元都是1，且非零首元所在列其余元都是0，则称为\textcolor{red}{行简化阶梯型矩阵}\index{高斯消元法!行简化阶梯型矩阵}
 
-\begin{keypoint}
+\begin{note}
     \index{线性方程组解的特征}
 
     \begin{center}
@@ -63,7 +63,7 @@
 
 如果$d_{r+1}=0$,则存在如下情况：
 
-\begin{asparaenum}
+\begin{enumerate}
     \item r=n，存在唯一解
     $$
     \begin{aligned}
@@ -77,10 +77,10 @@
     $$
 
     \item 当r<n时，存在无穷多的解
-    
+
     把矩阵的每一个非零首元所在列的元称为\index{线性方程组解的特征!基本未知量}\textcolor{red}{基本未知量}，将其余元所在列称为\textcolor{red}{自由未知量}\index{线性方程组解的特征!自由未知量}，基本变量由自由变量的线性组合表示。
-\end{asparaenum}
-\end{keypoint}
+\end{enumerate}
+\end{note}
 
 \index{齐次线性方程组!平凡解}
 
@@ -109,7 +109,7 @@
 
 对一个$m\times n$的矩阵而言，进行初等行变换相当于左乘一个初等矩阵，进行初等列变换相当于右乘一个初等矩阵
 
-\begin{keypoint}
+\begin{note}
     如果一个矩阵能够由A进行行初等变换得到，则必然存在有限个初等矩阵，使得
 $$
 B=E_kE_{k-1}\cdots E_1A
@@ -122,4 +122,4 @@ $$
 $$
 B=P_kP_{k-1}\cdots P_1 A Q_1Q_2\cdots Q_l
 $$
-\end{keypoint}
+\end{note}

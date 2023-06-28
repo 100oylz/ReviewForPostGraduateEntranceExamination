@@ -1,6 +1,6 @@
 \subsubsection{矩阵的概念}
 
-\begin{information}
+\begin{definition}
 	\textcolor{red}{矩阵}\index{矩阵}是一个由$m\times n$个数组成的m行n列的数表，形如：
 	$$
 	\begin{pmatrix}
@@ -12,7 +12,7 @@
 	$$
 
 	我们将其称之为矩阵，记作$A_{m\times n}$或$(a_{ij})_{m\times n}$,通常使用大写字母来表示矩阵，小写字母表示矩阵中的元素，如需指明行列数，需使用下标，如前。
-\end{information}
+\end{definition}
 
 n元线性方程组
 $$
@@ -53,9 +53,9 @@ $$
 
 若方阵$A=(a_{ij})_{n\times n}$的元$a_{ij}=0,(i\neq j)$,则称A为\textcolor{red}{对角矩阵}\index{矩阵!对角矩阵diag}.记作$A=diag(a_{11},a_{22},\cdots,a_{nn})$
 
-\begin{keypoint}
+\begin{note}
 	对角矩阵首先是方阵
-\end{keypoint}
+\end{note}
 
 对角元全为1的对角矩阵称为\textcolor{red}{单位矩阵},n阶单位矩阵记为$I_n$,不致混淆的情况下也记为$I$\index{矩阵!单位矩阵 I}
 
@@ -86,11 +86,11 @@ $$
 
 两个矩阵A和B相等,如果他们是同型矩阵且对应元相等,则称A和B\textcolor{red}{相等}\index{矩阵相等}
 
-\begin{keypoint}
+\begin{note}
 	证明矩阵定理的时候,需要先证明同型,再证明对应元相等,两者缺一不可
-\end{keypoint}
+\end{note}
 
-\begin{information}
+\begin{definition}
 	\index{矩阵线性运算!矩阵加法}
 \textcolor{red}{矩阵加法}就是：设两个矩阵A和B是$m\times n$的同型矩阵，将他们的对应元相加得到：
 \begin{equation*}
@@ -99,7 +99,7 @@ C=(a_{ij}+b_{ij})_{m\times n}=(c_{ij})_{m\times n}
 
 则称C是A+B的和，记作$C=A+B$
 
-\end{information}
+\end{definition}
 
 将A中每一个元$a_{ij}$换做$-a_{ij}$，则可以得到\textcolor{red}{负矩阵}\index{负矩阵}
 
@@ -107,10 +107,10 @@ C=(a_{ij}+b_{ij})_{m\times n}=(c_{ij})_{m\times n}
 
 根据减法的定义 ，显然$A-B=O$与$A=B$等价
 
-\begin{information}
+\begin{definition}
 	\index{矩阵线性运算!矩阵数乘}
 	设A为一个$m\times n$矩阵，常数k与矩阵A进行\textcolor{red}{矩阵数乘},将A中对应元做如下操作$a_{ij}\leftarrow k\times a_{ij}$，记为$kA$
-\end{information}
+\end{definition}
 
 矩阵的线性运算符合以下性质,其中A、B、C为同型矩阵，k、l为常数：
 
@@ -129,7 +129,7 @@ C=(a_{ij}+b_{ij})_{m\times n}=(c_{ij})_{m\times n}
 
 \index{矩阵乘法}
 
-\begin{keypoint}
+\begin{definition}
 	设A为$m\times p$型矩阵,B为$p\times n$型矩阵，则由元$c_{ij}$组成的：
 	\begin{equation*}
 		\begin{aligned}
@@ -139,7 +139,7 @@ C=(a_{ij}+b_{ij})_{m\times n}=(c_{ij})_{m\times n}
 	\end{equation*}
 
 	$m\times n$型矩阵为矩阵A与B的乘积，记作$\mathcal{C=AB}$
-\end{keypoint}
+\end{definition}
 
 \textcolor{red}{矩阵乘法}满足以下性质：
 
@@ -153,7 +153,7 @@ C=(a_{ij}+b_{ij})_{m\times n}=(c_{ij})_{m\times n}
 			\end{aligned}$}
 \end{enumerate}
 
-\begin{question}
+\begin{problem}
 	证明结合律：$A(BC)=(AB)C$
 
 	\begin{proof}
@@ -172,7 +172,7 @@ $$
 综上所述，A、B矩阵同型且矩阵元相等，所以等式两边等价
 
 	\end{proof}
-\end{question}
+\end{problem}
 
 性质数乘结合律和分配律都可以套用结合律的模板，先证同型，再证矩阵元相等即可
 
@@ -197,9 +197,9 @@ $$
 
 当$AB\neq BA$时称A与B不可交换，$AB=BA$时称A与B可交换，一般不满足交换律
 
-\begin{exclamation}
+\begin{note}
 	$AB-AC=A(B-C)O$不能判断$B-C=O$如上
-\end{exclamation}
+\end{note}
 
 但是对于单位矩阵I而言，I满足如下性质:
 
@@ -211,7 +211,7 @@ $$
 
 其中$kI=diag(k,k\,cdots,k)$被称为\textcolor{red}{数量矩阵}\index{矩阵!数量矩阵}，n阶数量矩阵与n阶方阵A也是可交换的。
 
-\begin{keypoint}
+\begin{definition}
 	\index{矩阵的幂}
 	\textcolor{red}{矩阵的幂}为,设A为n阶方阵,k为正整数
 	$$
@@ -225,9 +225,9 @@ $$
 	$$
 	A^kA^m=A^{m+k},(A^{m^k})=(A^m)^k
 	$$
-\end{keypoint}
+\end{definition}
 
-\begin{question}
+\begin{example}
 	一般来说，$(AB)^k\neq A^kB^k$
 
 	\begin{proof}[感性证明]
@@ -244,9 +244,9 @@ $$
 	\end{proof}
 
 	当$AB=BA$时，显然$(AB)^k= A^kB^k$，其逆不真
-\end{question}
+\end{example}
 
-\begin{information}
+\begin{definition}
 	\index{矩阵的多项式}
 	A是一个n阶方阵
 	$$
@@ -271,7 +271,7 @@ $$
 	$$
 
 	$$(A+\lambda U)^n=A^n+C_n^1\lambda A+\cdots+C_n^{n-1}\lambda^{n-1}A+\lambda^n I$$
-\end{information}
+\end{definition}
 
 n个变量$x_1,x_2,\cdots,x_n$和m个变量之间的对应关系
 \begin{equation*}
@@ -357,9 +357,9 @@ $$
 	\item $(AB)^T=B^TA^T$
 \end{enumerate}
 
-\begin{question}
+\begin{example}
 	$(AB)^T=B^TA^T$
-	
+
 	\begin{proof}
 		首先证明同型，假设A为$m\times p$,B为$p\times n$型矩阵，则$(AB)T$,$B^TA^T$均为$m\times n$
 
@@ -374,7 +374,7 @@ $$
 
 		显然有矩阵元相等
 	\end{proof}
-\end{question}
+\end{example}
 
 若$A^T=A$，则称A为\textcolor{red}{对称矩阵}，若$A^T=-A$,则称A为\textcolor{red}{反称矩阵}\index{矩阵!对称矩阵}\index{矩阵!反称矩阵}
 
@@ -384,7 +384,7 @@ $$
 
 对称矩阵的线性运算仍为对称矩阵吗，对称矩阵的乘积不一定为对称矩阵
 
-\begin{question}
+\begin{example}
 	假设A与B都是n阶对称矩阵，证明矩阵AB为对称矩阵的充要条件是AB=BA
 
 	\begin{proof}
@@ -395,4 +395,4 @@ $$
 
 	\textcolor{red}{对于任意矩阵A,$AA^T$和$A^TA$为对称矩阵}
 
-\end{question}
+\end{example}

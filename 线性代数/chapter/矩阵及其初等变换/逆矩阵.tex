@@ -1,0 +1,98 @@
+\subsubsection{逆矩阵的概念与性质}
+
+\index{逆矩阵}
+设A为n阶方阵,若存在n阶方阵B使得
+$$
+	AB=BA=I
+$$
+
+则称A是可逆矩阵，简称A可逆，B为A的\textcolor{red}{逆矩阵}
+
+\begin{example}
+	如果A可逆，A的逆矩阵唯一
+
+	\begin{proof}
+		假设存在B和C两个逆矩阵，根据性质可知:
+		$$
+			\begin{aligned}
+				AB=        & BA=I        \\
+				AC=        & CA=I        \\
+				B=BI=B(AC) & =(BA)C=IC=C \\
+			\end{aligned}
+		$$
+		由此可知B和C相等，A的逆矩阵唯一
+	\end{proof}
+\end{example}
+
+由定义可知：如果A是B的逆矩阵，那么B也是A的逆矩阵，AB互为逆矩阵
+
+\index{逆矩阵!对角矩阵的逆矩阵}
+
+根据定义可以得知，若A为对角矩阵
+$$diag(d_1,d_2,\cdots.d_n),d_i\neq 0$$
+,则\textcolor{red}{对角矩阵的逆矩阵}为：
+
+$$
+	A^{-1}=diag(\frac{1}{d_1},\frac{1}{d_2},\cdots,\frac{1}{d_n})
+$$
+
+\textcolor{red}{并非每个矩阵都可逆}
+
+\begin{definition}
+	\index{逆矩阵!逆矩阵的性质}
+
+	逆矩阵的性质，假设A与B均为n阶可逆矩阵，数$\lambda\neq 0$,则
+
+	\begin{enumerate}
+		\item {$a^{-1}$可逆,且$(A^{-1})^{-1}=A$}
+		\item $\lambda A$可逆,且$(\lambda A)^{-1}=\frac{1}{\lambda}A^{-1}$
+		\item (AB)可逆，且$(AB)^{-1}=B^{-1}A^{-1}$
+		\item $A^T$可逆，且$(A^T)^{-1}=(A^{-1})^T$
+	\end{enumerate}
+\end{definition}
+
+下面分别证明3和4号定理：
+
+\begin{example}
+	假设A与B均为n阶可逆矩阵,(AB)可逆,且$(AB)^{-1}=B^{-1}A^{-1}$
+
+	\begin{proof}
+		$$
+			AB(B^{-1}A^{-1})=A(BB^{-1})A^{-1}=AA^{-1}=I
+		$$
+
+		所以AB可逆，且$(AB)^{-1}=B^{-1}A^{-1}$
+	\end{proof}
+\end{example}
+
+\begin{example}
+	假设A为n阶可逆矩阵，$A^T$可逆，且$(A^T)^{-1}=(A^{-1})^T$
+
+	\begin{proof}
+		$$
+			\begin{aligned}
+				A^T(A^{-1})^T & =(A^{-1}A)^T\quad \because B^TA^T=(AB)^T \\
+				              & =I^T                                     \\
+				              & =I                                       \\
+			\end{aligned}
+		$$
+
+		所以$A^T$可逆，且$(A^T)^{-1}=(A^{-1})^T$
+	\end{proof}
+\end{example}
+
+其中3号定理可以推广到n个可逆矩阵的情况：
+
+$$
+	(A_1A_2\cdots A_n)^{-1}=A_n^{-1}A_{n-1}^{-1}\cdots A_1^{-1}  $$
+
+\textcolor{red}{证明矩阵是否可逆的关键是证明一个矩阵是否存在另一个矩阵使得两个矩阵相乘为I}
+
+以下是几道例题：
+
+\begin{note}
+
+设方阵B为幂等矩阵($B^2=B$,从而$\forall  k\in N^*$\footnote[1]{$N^*$为正整数集合，即$N\backslash\{0\}$})
+
+\end{note}
+
