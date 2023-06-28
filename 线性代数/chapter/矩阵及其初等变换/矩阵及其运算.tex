@@ -1,4 +1,4 @@
-\subsubsection{矩阵的概念}
+\subsection{矩阵的概念}
 
 \begin{definition}
 	\textcolor{red}{矩阵}\index{矩阵}是一个由$m\times n$个数组成的m行n列的数表，形如：
@@ -77,14 +77,16 @@ $$
 
 分别被称为\textcolor{red}{上三角矩阵}\index{矩阵!上三角矩阵}和\textcolor{red}{下三角矩阵}\index{矩阵!下三角矩阵}
 
-\subsubsection{矩阵的线性运算}
+\subsection{矩阵的线性运算}
 \index{矩阵线性运算}
-
+\begin{note}
 矩阵的加法与矩阵的数乘统称为矩阵的\textcolor{red}{线性运算}
-
+\end{note}
 如果A和B都是$m\times n$的矩阵,则称A和B是\textcolor{red}{同型矩阵}\index{同型矩阵}
 
-两个矩阵A和B相等,如果他们是同型矩阵且对应元相等,则称A和B\textcolor{red}{相等}\index{矩阵相等}
+\begin{definition}
+	两个矩阵A和B相等,如果他们是同型矩阵且对应元相等,则称A和B\textcolor{red}{相等}\index{矩阵相等}
+\end{definition}
 
 \begin{note}
 	证明矩阵定理的时候,需要先证明同型,再证明对应元相等,两者缺一不可
@@ -113,19 +115,21 @@ C=(a_{ij}+b_{ij})_{m\times n}=(c_{ij})_{m\times n}
 \end{definition}
 
 矩阵的线性运算符合以下性质,其中A、B、C为同型矩阵，k、l为常数：
+\begin{theorem}
+	\begin{enumerate}
+		\item {$A+B=B+A$}
+		\item {$(A+B)+C=A+(B+C))$}
+		\item {$A+O=A$}
+		\item {$A+(-A)=O$}
+		\item {$1A=A$}
+		\item {$k(lA)=(kl)A$}
+		\item {$k(A+B)=kA+kB$}
+		\item {(k+l)A=kA+lA}
+	\end{enumerate}
+\end{theorem}
 
-\begin{enumerate}
-	\item {$A+B=B+A$}
-	\item {$(A+B)+C=A+(B+C))$}
-	\item {$A+O=A$}
-	\item {$A+(-A)=O$}
-	\item {$1A=A$}
-	\item {$k(lA)=(kl)A$}
-	\item {$k(A+B)=kA+kB$}
-	\item {(k+l)A=kA+lA}
-\end{enumerate}
 
-\subsubsection{矩阵的乘法}
+\subsection{矩阵的乘法}
 
 \index{矩阵乘法}
 
@@ -143,15 +147,18 @@ C=(a_{ij}+b_{ij})_{m\times n}=(c_{ij})_{m\times n}
 
 \textcolor{red}{矩阵乘法}满足以下性质：
 
-\begin{enumerate}
-	\item {结合律      $A(BC)=(AB)C$}
-	\item {数乘结合律      $k(AB)=k(AB)$}
-	\item {分配律
-		$\begin{aligned}
-			&A(B+C)=AB+AC\\
-			&(B+C)A=BA+CA\\
-			\end{aligned}$}
-\end{enumerate}
+\begin{theorem}
+	\begin{enumerate}
+		\item {结合律      $A(BC)=(AB)C$}
+		\item {数乘结合律      $k(AB)=k(AB)$}
+		\item {分配律
+			$\begin{aligned}
+				&A(B+C)=AB+AC\\
+				&(B+C)A=BA+CA\\
+				\end{aligned}$}
+	\end{enumerate}
+\end{theorem}
+
 
 \begin{problem}
 	证明结合律：$A(BC)=(AB)C$
@@ -312,17 +319,18 @@ x\\y
 		\draw[] (30:.6) arc (30:60:.6)node[right]{$\theta$};
 	\end{tikzpicture}
 \end{figure}
-
+\begin{proof}
 $$
 \begin{aligned}
 x'&=r\cos(\theta+\alpha)\\&=r\cos\theta\cos\alpha-r\sin\theta\sin\alpha\\&=x\cos\theta-y\sin\alpha\\
 y'&=r\sin(\theta+\alpha)\\&=r\sin\theta\cos\alpha+r\sin\alpha\cos\theta\\&=x\sin\theta+y\cos\theta\\
 \end{aligned}
 $$
+\end{proof}
 
-\subsubsection{矩阵的转置}
-
-\index{矩阵转置}
+\subsection{矩阵的转置}
+\begin{definition}
+	\index{矩阵转置}
 
 把一个矩阵行列互换，则称处理后的矩阵叫做\textcolor{red}{矩阵的转置}，对于矩阵$A$而言:
 
@@ -347,15 +355,18 @@ $$
 $$
 
 显然有$m\times n$的矩阵，转置后为$n\times m$的矩阵
+\end{definition}
 
 矩阵转置具有如下性质：
 
-\begin{enumerate}
-	\item  $(A^T)^T=A$
-	\item $(A^T)+B^T=A^T+B^T$
-	\item $k(A^T)=(kA)^T$
-	\item $(AB)^T=B^TA^T$
-\end{enumerate}
+\begin{theorem}
+	\begin{enumerate}
+		\item  $(A^T)^T=A$
+		\item $(A^T)+B^T=A^T+B^T$
+		\item $k(A^T)=(kA)^T$
+		\item $(AB)^T=B^TA^T$
+	\end{enumerate}
+\end{theorem}
 
 \begin{example}
 	$(AB)^T=B^TA^T$

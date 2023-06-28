@@ -1,10 +1,10 @@
-\subsubsection{高斯消元法}
+\subsection{高斯消元法}
 
 \index{齐次线性方程组}
 
 \index{非齐次线性方程组}
-
-一般地我们把$AX=b$中如果b中所有元素至少有一个不为0，则称为\textcolor{red}{非齐次线性方程组}，否则称为\textcolor{red}{齐次线性方程组},满足方程的一组X称为方程组的一组解
+\begin{definition}
+    一般地我们把$AX=b$中如果b中所有元素至少有一个不为0，则称为\textcolor{red}{非齐次线性方程组}，否则称为\textcolor{red}{齐次线性方程组},满足方程的一组X称为方程组的一组解
 \index{高斯消元法}
 \index{高斯消元法!矩阵的行列初等变化}
 \textcolor{red}{矩阵的行列初等变化}如下：
@@ -14,9 +14,12 @@
     \item 用一非零数数乘某一行(列)的所有元
     \item 把矩阵的某一行(列)的适当倍数加到另一行上
 \end{enumerate}
+\end{definition}
 
 
-解线性方程组可以使用有限次的初等行变换操作增广矩阵
+\begin{note}
+    解线性方程组可以使用有限次的初等行变换操作增广矩阵
+\end{note}
 
 \begin{algorithm}[H]
     \caption[]{\textcolor{red}{高斯消元法}}
@@ -38,7 +41,7 @@
 
 如果行阶梯形矩阵每个非零行的非零首元都是1，且非零首元所在列其余元都是0，则称为\textcolor{red}{行简化阶梯型矩阵}\index{高斯消元法!行简化阶梯型矩阵}
 
-\begin{note}
+\begin{theorem}
     \index{线性方程组解的特征}
 
     \begin{center}
@@ -80,7 +83,7 @@
 
     把矩阵的每一个非零首元所在列的元称为\index{线性方程组解的特征!基本未知量}\textcolor{red}{基本未知量}，将其余元所在列称为\textcolor{red}{自由未知量}\index{线性方程组解的特征!自由未知量}，基本变量由自由变量的线性组合表示。
 \end{enumerate}
-\end{note}
+\end{theorem}
 
 \index{齐次线性方程组!平凡解}
 
@@ -94,18 +97,20 @@
 若一个矩阵A能够通过有限次的初等变化变成B,则称A与B\textcolor{red}{等价},记作$A\cong B$，如果使用的时行(列）初等变化，则称为A与B行(列)等价
 
 矩阵的等价关系性质如下：
+\begin{theorem}
+    \begin{itemize}
+        \item {反身性:若$A\cong A$}
+        \item {对称性:若$A\cong B$,则$B\cong A$}
+        \item {传递性:若$A\cong B,B\cong C$,则$A\cong C$}
+    \end{itemize}
+\end{theorem}
 
-\begin{itemize}
-    \item {反身性:若$A\cong A$}
-    \item {对称性:若$A\cong B$,则$B\cong A$}
-    \item {传递性:若$A\cong B,B\cong C$,则$A\cong C$}
-\end{itemize}
-
-\subsubsection{初等矩阵}
-
-\index{初等矩阵}
+\subsection{初等矩阵}
+\begin{definition}
+    \index{初等矩阵}
 
 将单位矩阵作一个初等变换得到的矩阵，叫做\textcolor{red}{初等矩阵}
+\end{definition}
 
 对一个$m\times n$的矩阵而言，进行初等行变换相当于左乘一个初等矩阵，进行初等列变换相当于右乘一个初等矩阵
 

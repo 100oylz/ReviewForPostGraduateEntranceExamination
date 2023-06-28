@@ -1,12 +1,13 @@
-\subsubsection{逆矩阵的概念与性质}
-
-\index{逆矩阵}
+\subsection{逆矩阵的概念与性质}
+\begin{definition}
+	\index{逆矩阵}
 设A为n阶方阵,若存在n阶方阵B使得
 $$
 	AB=BA=I
 $$
 
 则称A是可逆矩阵，简称A可逆，B为A的\textcolor{red}{逆矩阵}
+\end{definition}
 
 \begin{example}
 	如果A可逆，A的逆矩阵唯一
@@ -38,7 +39,7 @@ $$
 
 \textcolor{red}{并非每个矩阵都可逆}
 
-\begin{definition}
+\begin{theorem}
 	\index{逆矩阵!逆矩阵的性质}
 
 	逆矩阵的性质，假设A与B均为n阶可逆矩阵，数$\lambda\neq 0$,则
@@ -49,7 +50,7 @@ $$
 		\item (AB)可逆，且$(AB)^{-1}=B^{-1}A^{-1}$
 		\item $A^T$可逆，且$(A^T)^{-1}=(A^{-1})^T$
 	\end{enumerate}
-\end{definition}
+\end{theorem}
 
 下面分别证明3和4号定理：
 
@@ -90,9 +91,9 @@ $$
 
 以下是几道例题：
 
-\begin{note}
+\begin{example}
 
 设方阵B为幂等矩阵($B^2=B$,从而$\forall  k\in N^*$\footnote[1]{$N^*$为正整数集合，即$N\backslash\{0\}$})
 
-\end{note}
+\end{example}
 
