@@ -1,4 +1,4 @@
-\documentclass[lang=cn,color=green]{elegantbook}
+\documentclass[lang=cn,color=green,device=pad]{elegantbook}
 \usepackage{amsmath}
 \usepackage[]{fontspec,xunicode}
 \usepackage{amssymb}
@@ -19,24 +19,14 @@
 \makeindex[columns=2,intoc,title=术语索引,options=-s example.ist,columnseprule]
 \cover{logo.png}
 \logo{./pic/cover.jpg}
-\usepackage{hyperref}
 \setcounter{minitocdepth}{3}
-% \hypersetup{
-% 	bookmarksnumbered,
-% 	bookmarks=true,
-% 	colorlinks=true,
-% 	linkcolor={red},
-% 	citecolor={green},
-% 	urlcolor={blue},
-% 	pagebackref=true
-% }
-
 \newcommand{\mychapter}[1]{
 \chapter{#1}
 \minitoc
 }
 \newcommand{\mytableofcontents}[0]
 {
+	\setcounter{tocdepth}{3}
 	\pagestyle{fancy}
 	\tableofcontents
 	\newpage

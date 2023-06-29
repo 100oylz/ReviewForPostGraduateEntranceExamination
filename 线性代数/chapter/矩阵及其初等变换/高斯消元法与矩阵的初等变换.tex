@@ -3,7 +3,7 @@
 \index{齐次线性方程组}
 
 \index{非齐次线性方程组}
-\begin{definition}
+\begin{definition}{初等变化}{elementarychange}
     一般地我们把$AX=b$中如果b中所有元素至少有一个不为0，则称为\textcolor{red}{非齐次线性方程组}，否则称为\textcolor{red}{齐次线性方程组},满足方程的一组X称为方程组的一组解
 \index{高斯消元法}
 \index{高斯消元法!矩阵的行列初等变化}
@@ -41,7 +41,7 @@
 
 如果行阶梯形矩阵每个非零行的非零首元都是1，且非零首元所在列其余元都是0，则称为\textcolor{red}{行简化阶梯型矩阵}\index{高斯消元法!行简化阶梯型矩阵}
 
-\begin{theorem}
+\begin{theorem}{线性方程组解的特征}{linearsymbol}
     \index{线性方程组解的特征}
 
     \begin{center}
@@ -91,13 +91,15 @@
 
 
 当r<n时，存在无穷多的解，设m个n元方程组组成的线性方程组$AX=0$，若$m<n$,则方程组必有非零解
-
-\index{矩阵等价}
+\begin{definition}{矩阵等价}{equivalence}
+    \index{矩阵等价}
 
 若一个矩阵A能够通过有限次的初等变化变成B,则称A与B\textcolor{red}{等价},记作$A\cong B$，如果使用的时行(列）初等变化，则称为A与B行(列)等价
+\end{definition}
+
 
 矩阵的等价关系性质如下：
-\begin{theorem}
+\begin{theorem}{矩阵的等价关系性质}{equivalence}
     \begin{itemize}
         \item {反身性:若$A\cong A$}
         \item {对称性:若$A\cong B$,则$B\cong A$}
@@ -106,7 +108,7 @@
 \end{theorem}
 
 \subsection{初等矩阵}
-\begin{definition}
+\begin{definition}{初等矩阵}{elementarymatrix}
     \index{初等矩阵}
 
 将单位矩阵作一个初等变换得到的矩阵，叫做\textcolor{red}{初等矩阵}

@@ -1,12 +1,12 @@
 \subsection{逆矩阵的概念与性质}
-\begin{definition}
+\begin{definition}{逆矩阵}{inversematrix}
 	\index{逆矩阵}
-设A为n阶方阵,若存在n阶方阵B使得
-$$
-	AB=BA=I
-$$
+	设A为n阶方阵,若存在n阶方阵B使得
+	$$
+		AB=BA=I
+	$$
 
-则称A是可逆矩阵，简称A可逆，B为A的\textcolor{red}{逆矩阵}
+	则称A是可逆矩阵，简称A可逆，B为A的\textcolor{red}{逆矩阵}
 \end{definition}
 
 \begin{example}
@@ -39,7 +39,7 @@ $$
 
 \textcolor{red}{并非每个矩阵都可逆}
 
-\begin{theorem}
+\begin{theorem}{逆矩阵}{inversematrix}
 	\index{逆矩阵!逆矩阵的性质}
 
 	逆矩阵的性质，假设A与B均为n阶可逆矩阵，数$\lambda\neq 0$,则
@@ -93,7 +93,84 @@ $$
 
 \begin{example}
 
-设方阵B为幂等矩阵($B^2=B$,从而$\forall  k\in N^*$\footnote[1]{$N^*$为正整数集合，即$N\backslash\{0\}$})
+	设方阵B为幂等矩阵($B^2=B$,从而$\forall  k\in N^*$\footnote[1]{$N^*$为正整数集合，即$N\backslash\{0\}$}),证明A可逆，且A的逆矩阵为：
 
+	$$ A^{-1}=\frac{1}{2}(3I-A) $$
+
+	\begin{proof}
+		$$
+			\begin{aligned}
+				A(\frac{1}{2}(3I-A))              & =\frac{1}{2}(A-3A^2)          \\
+				\because A=I+B \quad              & \therefore A^2=(I^2+2B+B^2)   \\
+				\because B\mbox{是幂等矩阵}.\quad & \therefore A^2=(I+3B)=(3A-2I) \\
+				A(\frac{1}{2}(3I-A))              & =\frac{1}{2}(3A-3A+2I)=I      \\
+				\therefore A\mbox{可逆且}         & A^{-1}=\frac{1}{2}(3I-A)
+			\end{aligned}
+		$$
+	\end{proof}
+	\begin{note}
+		若已知A的逆矩阵则可以直接相乘证明乘积为I
+	\end{note}
 \end{example}
 
+\begin{example}
+	设矩阵A满足$A^2-3A-10I=O$,证明A,A-4I都可逆
+
+	\begin{proof}
+		\par
+		由$A^2-3A-10I=O$，可知$A(A-3I)=10O$,$A(\frac{1}{10}(A-3I))=I$,A可逆，且$A^-1=\frac{1}{10}(A-3I)$
+
+		由$A^2-3A-10I=O$，可知$(A+I)(A-4I)=6I$,$(A-4I)(\frac{1}{6}(A+I))=I$,A-4I可逆，且$(A-4I)^-1=\frac{1}{6}(A+I)$
+
+	\end{proof}
+
+	\begin{note}
+		若A的逆矩阵未知，则通过已知条件，凑出A乘另一个矩阵等于I的形式，则可以证明A可逆
+	\end{note}
+\end{example}
+
+\begin{theorem}{可逆的等价命题}{inverseequal}
+	设A为n阶矩阵，则下列命题是等价的:
+	\begin{enumerate}
+		\item  A是可逆的
+		\item 齐次线性方程组AX=0只有零解
+		\item A与I行等价
+		\item A可表示为有限个初等矩阵的乘积
+	\end{enumerate}
+\end{theorem}
+
+以下进行循环证明：
+\begin{proof}
+	\par
+	$1\Rightarrow 2$
+
+	$$
+		\begin{aligned}
+			 & AX=0                                           \\
+			 & \because A\mbox{可逆},\therefore A^{-1}AX=IX=0 \\
+			 & \therefore X=0
+		\end{aligned}
+	$$
+
+	AX=0只有零解
+
+	$2\Rightarrow 3$
+
+	若齐次线性方程组AX=0只有零解
+
+	\begin{figure}[H]
+		\centering
+		\begin{tikzpicture}[>=latex,scale=.75]
+			\draw[->] (-2,0)node[left]{A}--node[above]{\textbf{行初等变化}}(2,0)node[right]{B(B为行阶梯形矩阵)};
+		\end{tikzpicture}
+	\end{figure}
+
+	则AX=0与BX=0同解，假设B中的对角元\footnote{矩阵行列式中对角线上的元素}存在0，则根据定理\ref{thm:linearsymbol},存在无穷多的解，与原定义不符。所以B中对角元全不为0,A经过行初等变化后可以得到的行阶梯形矩阵为I，根据定义\ref{def:equivalence},则A与I行等价
+
+	$3\Rightarrow 4$
+
+A与I行等价，齐次线性方程组
+
+	$4\Rightarrow 1$
+
+\end{proof}

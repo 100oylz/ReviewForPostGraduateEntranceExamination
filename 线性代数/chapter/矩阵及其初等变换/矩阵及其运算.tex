@@ -1,6 +1,6 @@
 \subsection{矩阵的概念}
 
-\begin{definition}
+\begin{definition}{矩阵}{matrix}
 	\textcolor{red}{矩阵}\index{矩阵}是一个由$m\times n$个数组成的m行n列的数表，形如：
 	$$
 	\begin{pmatrix}
@@ -84,7 +84,7 @@ $$
 \end{note}
 如果A和B都是$m\times n$的矩阵,则称A和B是\textcolor{red}{同型矩阵}\index{同型矩阵}
 
-\begin{definition}
+\begin{definition}{矩阵相等}{matrixequal}
 	两个矩阵A和B相等,如果他们是同型矩阵且对应元相等,则称A和B\textcolor{red}{相等}\index{矩阵相等}
 \end{definition}
 
@@ -92,7 +92,7 @@ $$
 	证明矩阵定理的时候,需要先证明同型,再证明对应元相等,两者缺一不可
 \end{note}
 
-\begin{definition}
+\begin{definition}{矩阵加法}{matrixadd}
 	\index{矩阵线性运算!矩阵加法}
 \textcolor{red}{矩阵加法}就是：设两个矩阵A和B是$m\times n$的同型矩阵，将他们的对应元相加得到：
 \begin{equation*}
@@ -109,13 +109,13 @@ C=(a_{ij}+b_{ij})_{m\times n}=(c_{ij})_{m\times n}
 
 根据减法的定义 ，显然$A-B=O$与$A=B$等价
 
-\begin{definition}
+\begin{definition}{矩阵数乘}{matrixmultiplewithnumber}
 	\index{矩阵线性运算!矩阵数乘}
 	设A为一个$m\times n$矩阵，常数k与矩阵A进行\textcolor{red}{矩阵数乘},将A中对应元做如下操作$a_{ij}\leftarrow k\times a_{ij}$，记为$kA$
 \end{definition}
 
 矩阵的线性运算符合以下性质,其中A、B、C为同型矩阵，k、l为常数：
-\begin{theorem}
+\begin{theorem}{线性运算按性质}{linearcalculate}
 	\begin{enumerate}
 		\item {$A+B=B+A$}
 		\item {$(A+B)+C=A+(B+C))$}
@@ -133,7 +133,7 @@ C=(a_{ij}+b_{ij})_{m\times n}=(c_{ij})_{m\times n}
 
 \index{矩阵乘法}
 
-\begin{definition}
+\begin{definition}{矩阵乘法}{matrixmultiple}
 	设A为$m\times p$型矩阵,B为$p\times n$型矩阵，则由元$c_{ij}$组成的：
 	\begin{equation*}
 		\begin{aligned}
@@ -147,7 +147,7 @@ C=(a_{ij}+b_{ij})_{m\times n}=(c_{ij})_{m\times n}
 
 \textcolor{red}{矩阵乘法}满足以下性质：
 
-\begin{theorem}
+\begin{theorem}{矩阵乘法性质}{multiplematrix}
 	\begin{enumerate}
 		\item {结合律      $A(BC)=(AB)C$}
 		\item {数乘结合律      $k(AB)=k(AB)$}
@@ -218,7 +218,7 @@ $$
 
 其中$kI=diag(k,k\,cdots,k)$被称为\textcolor{red}{数量矩阵}\index{矩阵!数量矩阵}，n阶数量矩阵与n阶方阵A也是可交换的。
 
-\begin{definition}
+\begin{definition}{矩阵的幂}{powerofmatrix}
 	\index{矩阵的幂}
 	\textcolor{red}{矩阵的幂}为,设A为n阶方阵,k为正整数
 	$$
@@ -253,7 +253,7 @@ $$
 	当$AB=BA$时，显然$(AB)^k= A^kB^k$，其逆不真
 \end{example}
 
-\begin{definition}
+\begin{definition}{矩阵的多项式}{polynomialmatrix}
 	\index{矩阵的多项式}
 	A是一个n阶方阵
 	$$
@@ -329,7 +329,7 @@ $$
 \end{proof}
 
 \subsection{矩阵的转置}
-\begin{definition}
+\begin{definition}{矩阵转置}{transposedmatrix}
 	\index{矩阵转置}
 
 把一个矩阵行列互换，则称处理后的矩阵叫做\textcolor{red}{矩阵的转置}，对于矩阵$A$而言:
@@ -359,7 +359,7 @@ $$
 
 矩阵转置具有如下性质：
 
-\begin{theorem}
+\begin{theorem}{转置矩阵性质}{transposedmatrix}
 	\begin{enumerate}
 		\item  $(A^T)^T=A$
 		\item $(A^T)+B^T=A^T+B^T$
