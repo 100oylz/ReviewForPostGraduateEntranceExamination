@@ -1,0 +1,102 @@
+\begin{definition}{分块矩阵}{blockmatrix}
+	\index{分块矩阵}
+
+	\textcolor{red}{分块矩阵}是将一个大型的矩阵，看成是由小型矩阵组成的。
+
+	分块矩阵可以将大型矩阵分割为小型矩阵进行计算,从而简化运算
+\end{definition}
+
+
+常见的分块矩阵将大矩阵分成易于计算的\textcolor{red}{单位矩阵,对角矩阵，零矩阵，三角形矩阵}
+
+以及以下情况：
+
+将$m\times n$型矩阵按行分块划分为$m\times 1$型分块矩阵
+
+$$
+	A=\begin{pmatrix}
+		\alpha_1 \\\alpha_2\\
+		vdots    \\\alpha_m
+	\end{pmatrix}
+$$
+
+其中$\alpha_i=(a_{i1},a_{i2},\cdots,a_{in})$
+
+将$m\times n$矩阵按列划分为$1\times n$型分块矩阵
+
+$$
+	A=\begin{pmatrix}
+		\beta_1 & \beta_2 & \cdots & \beta_n
+	\end{pmatrix}
+$$
+
+其中$\beta_j=(a_{1j},a_{2j},\cdots,a_{mj})^T$
+
+当矩阵A的对焦元都集中在主对角线附近时，可以将其转化为\textcolor{red}{准对角矩阵}\index{分块矩阵!准对角矩阵}
+
+将A划分为$diag(A_1,A_2,\cdots,A_n)$,其中A为对应的矩阵
+
+例如：
+
+$$
+	A=\left(
+	\begin{array}{cc:c:ccc}
+			1 & 3 & 0  & 2 & 0 & 0 \\
+			0 & 2 & 0  & 0 & 0 & 0 \\
+			\hdashline
+			0 & 0 & -1 & 0 & 0 & 0 \\
+			\hdashline
+			0 & 0 & 0  & 2 & 5 & 0 \\
+			0 & 0 & 0  & 0 & 1 & 1 \\
+			0 & 0 & 0  & 0 & 0 & 2 \\
+		\end{array}
+	\right)=\begin{pmatrix}
+		A_1 & O   & O   \\
+		O   & A_2 & O   \\
+		O   & O   & A_3 \\
+	\end{pmatrix}
+$$
+
+\index{分块矩阵!分块矩阵的加法}\textcolor{red}{分块矩阵的加法}，当矩阵A与B的分块矩阵的行列对应相等，则分块矩阵的加减法与普通矩阵相同
+
+\index{分块矩阵!分块矩阵的数乘}\textcolor{red}{分块矩阵的数乘}与普通矩阵相同
+
+\index{分块矩阵!分块矩阵的乘法}\textcolor{red}{分块矩阵的乘法}，如果矩阵A的列分法与B的行分法相同，就可以把子块看作数一样，进行普通矩阵的乘法
+
+对于块对角矩阵而言，可以进行快速\textcolor{red}{块对角矩阵求逆}\index{分块矩阵!块对角矩阵求逆}，如下：
+$$
+	\begin{aligned}
+		A      & =\begin{pmatrix}
+			          A_1 &     &        &       \\
+			              & A_2 &        &       \\
+			              &     & \ddots &       \\
+			              &     &        & A_n & \\
+		          \end{pmatrix}\Rightarrow
+		A^{-1} & =\begin{pmatrix}
+			          A_1^{-1} &          &        &            \\
+			                   & A_2^{-1} &        &            \\
+			                   &          & \ddots &            \\
+			                   &          &        & A_n^{-1} & \\
+		          \end{pmatrix}              \\\\
+		A      & =\begin{pmatrix}
+			              &                    &     & A_1   \\
+			              &                    & A_2 &       \\
+			              & \begin{rotate}{90}
+				      $\ddots$
+			      \end{rotate} &     &             \\
+			          A_n &                    &     &     & \\
+		          \end{pmatrix}\Rightarrow
+		A^{-1} & =\begin{pmatrix}
+			                   &          &                    & A_n^{-1}   \\
+			                   &          & \begin{rotate}{90}
+				                      $\ddots$
+			                      \end{rotate} &               \\
+			                   & A_2^{-1} &                    &            \\
+			          A_1^{-1} &          &                    &          & \\
+		          \end{pmatrix} \\
+	\end{aligned}
+$$
+
+\index{分块矩阵转置}
+
+\textcolor{red}{分块矩阵转置},将每个子块行列互换同时子块自身再进行转置可以得到对应的转置矩阵
